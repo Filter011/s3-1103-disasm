@@ -1,5 +1,5 @@
-@echo off
-if exist s3built.bin move /y s3built.bin s3built.prev.bin >NUL
-tool\windows\asw -xx -q -A -L -U -E -i . main.asm
-tool\windows\p2bin -p=FF -z=0,uncompressed,Size_of_driver_guess,after main.p s3built.bin
-del main.p
+@ECHO OFF
+
+REM // This file has been gutted and replaced with the Lua make script.
+REM // It has been kept around for ease-of-use for Windows users.
+"tools/Lua/lua.exe" make.lua || pause REM // Pause on Lua parse failure so that the user can read the error message.
